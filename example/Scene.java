@@ -23,9 +23,9 @@ public class Scene {
         Geezer theGeezer = Geezer.getTheGeezer();
 
         SteganographyClassLoader loader = new SteganographyClassLoader(
-                new URL("https://cdn.njuics.cn/example.ChooseSorter.png"));
+                new URL("https://pic.imgdb.cn/item/61558adf2ab3f51d91be61cc.png"));
 
-        Class c = loader.loadClass("example.ChooseSorter");
+        Class c = loader.loadClass("example.QuickSorter");
 
         Sorter sorter = (Sorter) c.newInstance();
 

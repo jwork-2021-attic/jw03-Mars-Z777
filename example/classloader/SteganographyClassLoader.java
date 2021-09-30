@@ -1,5 +1,6 @@
 package example.classloader;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
@@ -25,15 +26,15 @@ public class SteganographyClassLoader extends ClassLoader {
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
-
+    	
         try {
-            BufferedImage img = ImageIO.read(url);
-
+        	BufferedImage img = ImageIO.read(url);
+            
             SteganographyEncoder encoder = new SteganographyEncoder(img);
             byte[] bytes = encoder.decodeByteArray();
             return this.defineClass(name, bytes, 0, bytes.length);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new ClassNotFoundException();
         }
 
