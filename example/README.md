@@ -31,3 +31,5 @@
 [![asciicast](https://asciinema.org/a/438968.svg)](https://asciinema.org/a/438968)
 
 #### 4. 引用他人图片
+
+使用了王毓琦同学的图片，结果正确。
